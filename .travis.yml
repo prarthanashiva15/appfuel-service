@@ -2,4 +2,14 @@ sudo: false
 language: ruby
 rvm:
   - 2.4.1
+  - 2.3.3
+
 before_install: gem install bundler -v 1.15.0
+deploy:
+  provider: rubygems
+  api_key:
+    secure: IMalY+0x/o7m/T9WC0U+1gxFNIS+GLqMNj+uRJdP5lgftbI/61Tr9nfokIjuTNEbD7TY7DVtUvb8HgYpapmv3B/9ZhPuvmrH1a+UAZpclw9g6Cy4yuV4yEeY1YD3yadPCE0TV4IJNOyRia8sZPtHelBXkkUO7S3nsjrAwSUtFU3Tr7SQtlFIkeNuEKZCpNfYOG3Bw6tTJsabLt1jJ9unm8WDZCDvIwsKezhOjwn1iheZg4ag7w8VNbCtQ+/8zDDo08XjYaf5tXAYvq7TTFll3ukHFFFsUExGazNdHSsNvIXK3GBDnaRXkkSddBRl9Sjagh/ozvhXE+JChlYKpVrm8ZtvI+O3Zpmd5Ho0WZPXWZgj3f+tcPd+KNyJYmedLrX/PUkGCofvpAAkY0REWYpgP5I0lrAW7OMujdygA/z12C3xYwCJYUIlbhP+QFfrwX1M18YfodWbdKuh6DEWO5EHaw+k5HTtCGBwB0WLPPKEZUq/JsGgcEIc3gqLacEoPYsd7aYnge5KF1zu0K2yL/SSoDHv9BkF1w7XItdTaIIEk8JnHSwnDgat+F0XpTzl953GDTTUs4kjIDUCF2nVadQ42NZ6uejLv6ZEqilH/7gVRYWExvf3Tilsr+DzYxiZ1O17sdY4TLj5Tc1rfqNNovIdDplOHrbJTx/GOV1SA6fVqv4=
+  gem: 'appfuel-service'
+  on:
+    tags: true
+    repo: rsb/appfuel-service
