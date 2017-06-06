@@ -1,20 +1,19 @@
 sudo: false
 language: ruby
 rvm:
-  - 2.4.1
-  - 2.3.3
-
+- 2.4.1
+- 2.3.3
 before_install: gem install bundler -v 1.15.0
 deploy:
   provider: rubygems
-  api_key:
-    secure: IMalY+0x/o7m/T9WC0U+1gxFNIS+GLqMNj+uRJdP5lgftbI/61Tr9nfokIjuTNEbD7TY7DVtUvb8HgYpapmv3B/9ZhPuvmrH1a+UAZpclw9g6Cy4yuV4yEeY1YD3yadPCE0TV4IJNOyRia8sZPtHelBXkkUO7S3nsjrAwSUtFU3Tr7SQtlFIkeNuEKZCpNfYOG3Bw6tTJsabLt1jJ9unm8WDZCDvIwsKezhOjwn1iheZg4ag7w8VNbCtQ+/8zDDo08XjYaf5tXAYvq7TTFll3ukHFFFsUExGazNdHSsNvIXK3GBDnaRXkkSddBRl9Sjagh/ozvhXE+JChlYKpVrm8ZtvI+O3Zpmd5Ho0WZPXWZgj3f+tcPd+KNyJYmedLrX/PUkGCofvpAAkY0REWYpgP5I0lrAW7OMujdygA/z12C3xYwCJYUIlbhP+QFfrwX1M18YfodWbdKuh6DEWO5EHaw+k5HTtCGBwB0WLPPKEZUq/JsGgcEIc3gqLacEoPYsd7aYnge5KF1zu0K2yL/SSoDHv9BkF1w7XItdTaIIEk8JnHSwnDgat+F0XpTzl953GDTTUs4kjIDUCF2nVadQ42NZ6uejLv6ZEqilH/7gVRYWExvf3Tilsr+DzYxiZ1O17sdY4TLj5Tc1rfqNNovIdDplOHrbJTx/GOV1SA6fVqv4=
-  gem: 'appfuel-service'
+  gem: appfuel-service
   on:
     tags: true
     repo: rsb/appfuel-service
+  api_key:
+    secure: jIDV6YjLQEexv0pri9r/L/erejKJrNAYijYL1L6WW6AoWc29WeRsCtZC6n4168LhXqY87mGDaEWbXyiCLWDERbZkanJOyYadEvYle79IFTPPnI/RbT/aAN/0KTuQaMWEwv/OfMVS0sY826gG6Ah1B5jpdJE3hjZ5mnscY8spt1PKz7u7uTZsIzJHMcPnMlxJ+AbhijchzrZ5Il8UwBkdBDfo7Cw93fr0j1rSgihshDjArTyxP1mdpfrM1xmxSM5ARC1nGwiRaJdj456OQPEay81InZOj9ONrklIBnollDSnrTiEFGK7WmPBNHiKkz+LxVAcl9jntfTTklCr6yIOJAS1Mu3FLGcJjV050HwYaeR3Yd68pLB8ltyNS4Fm6GC6DyjaWAJHy2veLoRMD4KVmgz0gf3WZFP3D3dd+7exLwdOOJcQsHMF3QPxmMlNcFpy2vxmJtYzqVskuiBXY9l+S7dsVaXsNHt0Tfn7s1xQ/DViYR4vPWi0l3Zb/+0R+PeGvtCeM7bxszrXz+KaZ+OoSwspf2jNbf+KBn2DXuBJ+1ODaH0AIxLgHJc+2/9wIfubNAnOD5Jl/PnvE3seJlMDRr9l5j+O8/hDJlQqQVVUgmNfHjC4EIjpbPXsAId36/6H8wvCO4psA3xPtVvpSwBb8kbbKP0cHju3uwNx78dFaEzs=
 addons:
   code_climate:
     repo_token: 89d508f14d4c80f13d4d64635a4639e02c04cad3bb5a165850c32e5be36bf021
 after_success:
-  - bundle exec codeclimate-test-reporter
+- bundle exec codeclimate-test-reporter

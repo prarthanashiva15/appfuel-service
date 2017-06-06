@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Appfuel::Service::VERSION
   spec.authors       = ["Robert Scott-Buccleuch"]
   spec.email         = ["rsb.code@gmail.com"]
-
+  spec.licenses      = 'MIT'
   spec.summary       = %q{Allow Appfuel to work as a micro service}
   spec.description   = %q{Microsevice implementation using Sneakers and RabbitMQ}
   spec.homepage      = "https://github.com/rsb/appfuel-service"
