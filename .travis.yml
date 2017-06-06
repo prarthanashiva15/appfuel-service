@@ -13,3 +13,8 @@ deploy:
   on:
     tags: true
     repo: rsb/appfuel-service
+addons:
+  code_climate:
+    repo_token: 89d508f14d4c80f13d4d64635a4639e02c04cad3bb5a165850c32e5be36bf021
+after_success:
+  - bundle exec codeclimate-test-reporter
