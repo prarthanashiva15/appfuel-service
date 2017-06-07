@@ -1,5 +1,5 @@
- module Appfuel
-   module Service
+module Appfuel
+  module Service
     module Config
       def self.newrelic_definition
         Appfuel::Configuration.define :newrelic do
@@ -15,8 +15,8 @@
                       required(:new_relic_monitor_mode).filled(:str?)
                       required(:new_relic_agent_enabled).filled(:str?)
                     }
-          end
         end
       end
     end
   end
+end
