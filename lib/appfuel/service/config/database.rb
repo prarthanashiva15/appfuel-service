@@ -32,14 +32,14 @@ module Appfuel
 
           db_path = 'db'
           defaults path: db_path,
-                  migrations_path: "#{db_path}/migrations",
-                  seed_path: 'db/seed'
+                   migrations_path: "#{db_path}/migrations",
+                   seed_path: 'db/seed'
 
           define :main do
             defaults pool:     5,
-                    adapter: 'postgresql',
-                    encoding: 'unicode',
-                    schema_format: 'sql'
+                     adapter: 'postgresql',
+                     encoding: 'unicode',
+                     schema_format: 'sql'
 
             validator do
               required(:schema_search_path).filled(:str?)
@@ -57,6 +57,6 @@ module Appfuel
           end
         end
       end
-     end
+    end
   end
 end

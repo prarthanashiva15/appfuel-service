@@ -21,7 +21,7 @@
         Appfuel::Configuration.define :worker do
           file 'config/app.yaml'
           defaults logfile: 'stdout',
-                  audit_logfile: 'stdout'
+                   audit_logfile: 'stdout'
 
           validator {
             required(:env).filled(:str?)

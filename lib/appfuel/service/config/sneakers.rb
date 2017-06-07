@@ -27,13 +27,13 @@
       def self.sneakers_definition
         Appfuel::Configuration.define :sneakers do
           defaults heartbeat: 60,
-                  ack: true,
-                  daemonize: true,
-                  workers: 1,
-                  threads: 1,
-                  prefetch: 1,
-                  timeout_job_after: 5,
-                  durable: true
+                   ack: true,
+                   daemonize: true,
+                   workers: 1,
+                   threads: 1,
+                   prefetch: 1,
+                   timeout_job_after: 5,
+                   durable: true
 
           validator {
             required(:amqp).filled(:str?)

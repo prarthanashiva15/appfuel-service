@@ -4,8 +4,8 @@ module Appfuel
       def self.sentry_definition
         Appfuel::Configuration.define :sentry do
           validator {
-            required(:dsn).filled(:str?)
-        }
+                      required(:dsn).filled(:str?)
+                    }
         end
       end
     end
