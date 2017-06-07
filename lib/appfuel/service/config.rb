@@ -1,0 +1,7 @@
+require 'yaml'
+require_relative 'config/database'
+require_relative 'config/sneakers'
+require_relative 'config/aws'
+require_relative 'config/worker'
+require_relative 'config/sentry'
+require_relative 'config/newrelic'
