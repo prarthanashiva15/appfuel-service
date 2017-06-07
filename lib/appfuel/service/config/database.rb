@@ -16,10 +16,6 @@ module Appfuel
       # password  Database password
       # host      Location of the database server
       #
-      #
-      # offer:    configuration for the main database
-      # test:     configuration for the test database
-      #
       # @return Defintion
       def self.db_definition
         Appfuel::Configuration.define :db do
@@ -32,14 +28,14 @@ module Appfuel
 
           db_path = 'db'
           defaults path: db_path,
-                   migrations_path: "#{db_path}/migrations",
-                   seed_path: 'db/seed'
+            migrations_path: "#{db_path}/migrations",
+            seed_path: 'db/seed'
 
           define :main do
             defaults pool:     5,
-                     adapter: 'postgresql',
-                     encoding: 'unicode',
-                     schema_format: 'sql'
+              adapter: 'postgresql',
+              encoding: 'unicode',
+              schema_format: 'sql'
 
             validator do
               required(:schema_search_path).filled(:str?)
@@ -53,7 +49,6 @@ module Appfuel
               optional(:encoding).filled(:str?)
               optional(:port).filled(:int?)
             end
-
           end
         end
       end
