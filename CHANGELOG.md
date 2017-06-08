@@ -3,3 +3,4 @@ All notable changes to this project will be documented in this file. (Pending ap
 
 # [Unreleased]
 - `Added` Config files to Service
+- `Added` method in Config.rb such that it overrides the default implimentation.Also added test cases.
