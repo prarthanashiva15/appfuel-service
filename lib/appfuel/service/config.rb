@@ -9,7 +9,11 @@ require_relative 'config/newrelic'
 module Appfuel
   module Service
     module Config
-
+      # The module config has code which will override the config
+      # implementation in the config files.The recursive function
+      # update_definition will check for the appropriate key and replace the
+      # values in the config files with the values in the option parameter.
+      # There are checks for when the value is empty or not a hash.
       def self.configuration(options = {})
         update_definitions(worker_definition,options)
       end
